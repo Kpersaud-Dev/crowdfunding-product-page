@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+
+$moderate-cyan: hsl(176, 50%, 47%);
+$dark-cyan: hsl(176, 72%, 28%);
+$black: hsl(0, 0%, 0%);
+$dark-gray: hsl(0, 0%, 48%);
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Commissioner', sans-serif;
+}
+
+header {
+  background-image: url('/images/image-hero-mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 1em 0 1em;
+
+  .burger {
+
+    div {
+      background-color: white;
+      color: white;
+      width: 25px;
+      height: 3px;
+      margin: 5px;
+    }
+  }
+
+  .navbar {
+    display: none;
+  }
+}
+
+.main-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+
+  .card {
+    width: 80%;
+    border-radius: 12px;
+    border: 1px solid #f2f2f2;
+    padding: 2em;
+    background-color: white;
+  }
+
+  .top-info {
+    position: relative;
+    top: -3em;
+    text-align: center;
+
+    img {
+      position: relative;
+      top: -3.75em;
+    }
+
+    h1 {
+      font-size: 1.25rem;
+      position: relative;
+      top: -2em;
+    }
+
+    p {
+      font-size: .75rem;
+      line-height: 15px;
+      color: $dark-gray;
+      position: relative;
+      top: -2em;
+    }
+
+    .info-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .back {
+        cursor: pointer;
+        width: 70%;
+        background-color: $moderate-cyan;
+        color: white;
+        padding: 1em 2em;
+        border-radius: 20px;
+        border: 1px solid $moderate-cyan;
+        font-family: 'Commissioner', sans-serif;
+        font-weight: 500;
+      }
+
+      svg {
+        cursor: pointer;
+        margin-left: .5em;
+      }
+    }
+  }
+
+  .numbers-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1em;
+
+    .numbers {
+      border-bottom: 1px solid $dark-gray;
+      padding-bottom: 1em;
+      margin-bottom: 1em;
+
+      .sub-number {
+        display: block;
+        padding-top: .25em;
+        color: $dark-gray;
+      }
+    }
+
+    :nth-child(3) {
+      border-bottom: none;
+    }
+
+    progress {
+      border: none;
+      width: 100%;
+      height: 10px;
+      border-radius: 15px;
+    }
+
+    progress::-webkit-progress-value {
+      background: $moderate-cyan;
+      border-radius: 15px;
+      height: 10px;
+    }
+
+    progress::-moz-progress-bar {
+      background: #f4f4f4;
+      border-radius: 15px;
+      height: 10px;
+    }
+
+    progress::-webkit-progress-value {
+      background: $moderate-cyan;
+      border-radius: 15px;
+      height: 10px;
+    }
+
+    progress::-webkit-progress-bar {
+      background: #f4f4f4;
+      border-radius: 15px;
+      height: 10px;
+    }
+  }
+
+  .about {
+    margin-bottom: 5em;
+
+    h3 {
+      padding-bottom: 1em;
+      font-size: 1em;
+    }
+
+    .about-text {
+      padding-bottom: 1em;
+    }
+
+    p {
+      font-size: .75em;
+      color: $dark-gray;
+      line-height: 20px;
+    }
+
+    .reward {
+      padding: 1em;
+      width: 100%;
+      margin-top: 1em;
+
+      .reward-header {
+        font-size: .75em;
+        padding-bottom: .25em;
+      }
+
+      .pledge {
+        color: $moderate-cyan;
+        font-size: .75em;
+      }
+
+      .reward-description {
+        padding: 1em 0;
+      }
+
+      .reward-number {
+
+        .left {
+          font-size: .75em;
+          color: $dark-gray;
+          font-weight: 300;
+        }
+      }
+
+      .reward-button {
+        cursor: pointer;
+        width: 73%;
+        background-color: $moderate-cyan;
+        color: white;
+        padding: 1em 2em;
+        border-radius: 20px;
+        border: 1px solid $moderate-cyan;
+        font-family: 'Commissioner', sans-serif;
+        font-weight: 500;
+        margin-top: 2em;
+      }
+    }
+  }
+
+
+}
