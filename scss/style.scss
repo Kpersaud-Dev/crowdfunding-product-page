@@ -101,10 +101,20 @@ header {
         font-weight: 500;
       }
 
-      svg {
-        cursor: pointer;
-        margin-left: .5em;
+      .bookmarks {
+
+        svg {
+          cursor: pointer;
+          margin-left: .5em;
+        }
+
+        .bookmark {
+          display: none;
+        }
+
       }
+
+
     }
   }
 
@@ -202,9 +212,12 @@ header {
       }
 
       .reward-number {
+        position: relative;
 
         .left {
-          font-size: .75em;
+          position: relative;
+          bottom: .5em;
+          font-size: .5em;
           color: $dark-gray;
           font-weight: 300;
         }
@@ -221,9 +234,23 @@ header {
         font-family: 'Commissioner', sans-serif;
         font-weight: 500;
         margin-top: 2em;
+
+        &:hover {
+          background-color: $dark-cyan;
+          border: 1px solid $dark-cyan;
+        }
+      }
+    }
+
+    .sold-out {
+      opacity: 0.4;
+
+      .reward-button {
+        background-color: $dark-gray;
+        border: 1px solid $dark-gray;
       }
     }
   }
-
-
 }
+
+@import 'desktop';

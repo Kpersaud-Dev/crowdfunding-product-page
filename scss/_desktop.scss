@@ -1,0 +1,158 @@
+@media only screen and (min-width: 1024px) {
+
+  header {
+    background-image: url('/images/image-hero-desktop.jpg');
+    background-position: top;
+
+    .burger {
+      display: none;
+    }
+
+    .navbar {
+      display: block;
+      color: white;
+
+      ul {
+        display: flex;
+        justify-content: space-around;
+
+        li {
+          list-style-type: none;
+          padding: 1em;
+          transition: .5s;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+            transition: .5s;
+          }
+        }
+      }
+    }
+  }
+
+  .main-container {
+
+    .card {
+      width: 60%;
+    }
+
+    .top-info {
+
+      h1 {
+        font-size: 2em;
+        padding-top: 1em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+
+      .info-buttons {
+        justify-content: space-between;
+
+        .back {
+          width: 30%;
+
+          &:hover {
+            background-color: $dark-cyan;
+            border: 1px solid $dark-cyan;
+          }
+        }
+
+        .bookmarks {
+          display: flex;
+          position: relative;
+
+          svg {
+            position: relative;
+            left: 1.75em;
+
+            :hover {
+              cursor: pointer;
+            }
+          }
+
+          .bookmark {
+            display: inline;
+            padding: 1em 3em;
+            border-radius: 20px;
+            background-color: #f4f4f4;
+            border: 1px solid #f4f4f4;
+            color: $dark-gray;
+            font-weight: 700;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .numbers-container {
+      position: relative;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: left;
+
+      .numbers {
+        border-bottom: none;
+        border-right: 1px solid #f4f4f4;
+        padding-right: 3em;
+
+        h2 {
+          font-size: 2.5em;
+        }
+      }
+
+      .margin {
+        position: relative;
+        left: 3em;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        padding-right: 7em;
+      }
+
+      .last {
+        position: relative;
+        left: 7em;
+        border-right: none;
+        padding-right: 10em;
+      }
+    }
+
+    .about {
+
+      h3 {
+        font-size: 1.25em;
+      }
+
+      p {
+        font-size: 1em;
+        line-height: 30px;
+      }
+
+      .reward {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 2em;
+
+        .reward-header {
+          font-size: 1.25em;
+        }
+
+        .reward-number {
+          font-size: 2.5em;
+        }
+
+        .reward-button {
+          width: 33%;
+        }
+      }
+    }
+  }
+}
