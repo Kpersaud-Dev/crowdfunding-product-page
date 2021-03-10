@@ -18,6 +18,7 @@ html {
 
 body {
   font-family: 'Commissioner', sans-serif;
+
 }
 
 header {
@@ -28,6 +29,8 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 1em 1em 0 1em;
+  position: relative;
+  z-index: 1;
 
   .burger {
 
@@ -51,6 +54,8 @@ header {
   justify-content: center;
   align-items: center;
   background-color: #f4f4f4;
+  position: relative;
+  z-index: 1;
 
   .card {
     width: 80%;
@@ -91,6 +96,7 @@ header {
 
       .back {
         cursor: pointer;
+        outline: none;
         width: 70%;
         background-color: $moderate-cyan;
         color: white;
@@ -105,13 +111,31 @@ header {
 
         svg {
           cursor: pointer;
+          outline: none;
           margin-left: .5em;
         }
 
         .bookmark {
           display: none;
+          outline: none;
+
+          &.clicked {
+            color: $dark-cyan;
+          }
         }
 
+        &.clicked {
+          svg {
+
+            circle {
+              fill: $dark-cyan;
+            }
+          }
+
+          .bookmark {
+            color: $dark-cyan;
+          }
+        }
       }
 
 
@@ -225,6 +249,7 @@ header {
 
       .reward-button {
         cursor: pointer;
+        outline: none;
         width: 73%;
         background-color: $moderate-cyan;
         color: white;
@@ -250,7 +275,73 @@ header {
         border: 1px solid $dark-gray;
       }
     }
+
+    ///// Modal Styles /////
+
+    // .reward {
+    //   position: relative;
+
+    //   input {
+    //     position: absolute;
+    //     opacity: 0;
+    //     cursor: pointer;
+    //     height: 0;
+    //     width: 0;
+    //   }
+
+    //   /* Custom radio button */
+    //   .checkmark {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     height: 25px;
+    //     width: 25px;
+    //     background-color: #eee;
+    //     border-radius: 50%;
+    //     cursor: pointer;
+    //   }
+
+    //   /* On mouse-over, add background color */
+
+    //   &:hover input~.checkmark {
+    //     background: #ccc;
+    //   }
+
+    //   /* When radio button is checked, add different background */
+    //   & input:checked~.checkmark {
+    //     background-color: #2196F3;
+    //   }
+
+    //   /* Create indicator (dot/circle - hidden when not checked) */
+
+    //   .checkmark:after {
+    //     content: "";
+    //     position: absolute;
+    //     display: none;
+    //   }
+
+    //   /* Show the indicator when checked */
+    //   & input:checked~.checkmark:after {
+    //     display: block;
+    //   }
+
+    //   /* Style the indicator (dot/circle) */
+    //   & .checkmark:after {
+    //     top: 9px;
+    //     left: 9px;
+    //     width: 8px;
+    //     height: 8px;
+    //     border-radius: 50%;
+    //     background: white;
+    //   }
+
+    // }
+
+
+
   }
 }
 
+@import 'modal';
+@import 'tablet';
 @import 'desktop';

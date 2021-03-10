@@ -1,0 +1,22 @@
+@media only screen and (min-width: 768px) {
+
+
+  .main-container {
+
+    .card {
+      width: 55%;
+    }
+
+    .top-info {
+
+      .info-buttons {
+        justify-content: space-around;
+
+        .back {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+}

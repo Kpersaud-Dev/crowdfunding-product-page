@@ -1,0 +1,81 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+
+  .about {
+    margin-top: 3em;
+    overflow-y: auto;
+
+    svg {
+      cursor: pointer;
+      outline: none;
+      position: relative;
+      left: 14em;
+    }
+
+    .rewards-container {
+
+      .reward {
+        display: flex;
+        flex-flow: row wrap;
+
+        .reward-header {
+          padding-left: 1em;
+        }
+
+        .pledge {
+          width: 100%;
+          padding-left: 2.1em;
+        }
+
+        .enter-pledge {
+          display: none;
+          margin-top: 1em;
+          text-align: center;
+          border-top: 1px solid $dark-gray;
+          width: 100%;
+
+          p {
+            padding-top: 1.5em;
+            padding-bottom: 1.5em;
+          }
+
+          .buttons {
+            display: flex;
+            justify-content: space-around;
+
+            input {
+              border-radius: 20px;
+              width: 33%;
+              padding: 0 1em;
+              border: 1px solid $dark-gray;
+            }
+
+            .continue-btn {
+              border-radius: 20px;
+              background-color: $moderate-cyan;
+              color: white;
+              padding: 1em 2em;
+              border: 1px solid $moderate-cyan;
+              font-family: 'Commissioner', sans-serif;
+              font-weight: 500;
+            }
+
+          }
+        }
+      }
+    }
+
+
+  }
+}
+
+.modal-active {
+  background-color: rgba(0, 0, 0, 0.5);
+}

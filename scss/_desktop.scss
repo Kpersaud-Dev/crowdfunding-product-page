@@ -31,6 +31,7 @@
     }
   }
 
+
   .main-container {
 
     .card {
@@ -99,6 +100,7 @@
         border-bottom: none;
         border-right: 1px solid #f4f4f4;
         padding-right: 3em;
+        width: 33%;
 
         h2 {
           font-size: 2.5em;
@@ -151,6 +153,30 @@
 
         .reward-button {
           width: 33%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+
+  header {
+    justify-content: space-around;
+  }
+
+  .main-container {
+
+    .card {
+      width: 40%;
+    }
+
+    .about {
+
+      .reward {
+
+        .reward-button {
+          width: 25%;
         }
       }
     }

@@ -6,21 +6,25 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
-  
+  <script src="js/script.js" async></script>
   <title>Crowdfunding product page</title>
 
 </head>
+
 <body>
 
   <header>
+
     <div class="logo">
       <img src="images/logo.svg" alt="Logo">
     </div>
+
     <div class="burger">
       <div id="line1"></div>
       <div id="line2"></div>
       <div id="line3"></div>
     </div>
+
     <nav class="navbar">
       <ul>
         <li>About</li>
@@ -28,6 +32,7 @@
         <li>Get Started</li>
       </ul>
     </nav>
+
   </header>
 
   <main class="main-container">
@@ -40,28 +45,28 @@
         <button class="back">Back this project</button> 
         <div class="bookmarks">
           <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none"   fill-rule="evenodd"><circle fill="#2F2F2F" cx="28" cy="28" r="28"/><path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/></g></svg>
-          <button class="bookmark">Bookmark</button>
+          <button class="bookmark default">Bookmark</button>
         </div>
       </div>
     </div>
 
     <div class="numbers-container card">
       <div class="numbers">
-        <h2>$89,914</h2>
+        <h2 id="total-money">$89,914</h2>
         <span class="sub-number">of $100,000 backed</span>
       </div>
 
       <div class="numbers margin">
-        <h2>5,007</h2>
+        <h2 id="total-backers">5,007</h2>
         <span class="sub-number">total backers</span>
       </div>
 
       <div class="numbers margin last">
-        <h2>56</h2>
+        <h2 id="days-left">56</h2>
         <span class="sub-number">days left</span>
       </div>
 
-      <progress class="progress-bar" value="0.5"></progress>
+      <progress class="progress-bar" value="0.89"></progress>
     </div>
 
     <div class="about card">
@@ -116,6 +121,90 @@
       </div>
     </div>
   </main>
+
+  <!-- Modal Menu -->
+
+  <div class="main-container modal">
+
+    <div class="about card">
+      <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg" id="modal-exit"><path d="M11.314 0l2.828 2.828L9.9 7.071l4.243 4.243-2.828 2.828L7.07 9.9l-4.243 4.243L0 11.314 4.242 7.07 0 2.828 2.828 0l4.243 4.242L11.314 0z" fill="#000" fill-rule="evenodd" opacity=".4"/></svg>
+      <h3>Back this project</h3>
+      <p class="about-text">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
+
+      <div class="rewards-container">
+
+        <div class="reward card">
+          <input type="checkbox" class="radio-btn" id="first-radio">
+          <span class="checkmark"></span>
+          <h4 class="reward-header">Pledge with no reward</h4>
+          <p class="reward-description">Choose to support us without a reward if you simply believe in our project. As a backer, 
+            you will be signed up to receive product updates via email.
+          </p>
+
+          <div class="enter-pledge">
+            <p class="pledge-text">Enter your pledge</p>
+            <div class="buttons">
+              <input type="number">
+              <button class="continue-btn">Continue</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="reward card">
+          <input type="checkbox" class="radio-btn">
+          <h4 class="reward-header">Bamboo Stand</h4>
+          <span class="pledge">Pledge $25 or more</span>
+          <p class="reward-description">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
+            you’ll be added to a special Backer member list.</p>
+          <h2 class="reward-number">101 <span class="left">left</span></h2>
+
+          <div class="enter-pledge">
+            <p class="pledge-text">Enter your pledge</p>
+            <div class="buttons">
+              <input type="number">
+              <button class="continue-btn">Continue</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="reward card">
+          <input type="checkbox" class="radio-btn">
+          <h4 class="reward-header">Black Edition Stand</h4>
+          <span class="pledge">Pledge $75 or more</span>
+          <p class="reward-description">You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
+            member list. Shipping is included.</p>
+          <h2 class="reward-number">64<span class="left">left</span></h2>
+
+          <div class="enter-pledge">
+            <p class="pledge-text">Enter your pledge</p>
+            <div class="buttons">
+              <input type="number">
+              <button class="continue-btn">Continue</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="reward card sold-out">
+          <input type="checkbox" class="radio-btn">
+          <h4 class="reward-header">Mahogany Special Edition</h4>
+          <span class="pledge">Pledge $200 or more</span>
+          <p class="reward-description">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
+            to our Backer member list. Shipping is included.</p>
+          <h2 class="reward-number">0<span class="left">left</span></h2>
+
+          <div class="enter-pledge">
+            <p class="pledge-text">Enter your pledge</p>
+            <div class="buttons">
+              <input type="number">
+              <button class="continue-btn">Continue</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
   
 
   <!-- Selection modal start -->
