@@ -58,6 +58,8 @@
             }
 
             .continue-btn {
+              cursor: pointer;
+              outline: none;
               border-radius: 20px;
               background-color: $moderate-cyan;
               color: white;
@@ -66,13 +68,10 @@
               font-family: 'Commissioner', sans-serif;
               font-weight: 500;
             }
-
           }
         }
       }
     }
-
-
   }
 }
 
