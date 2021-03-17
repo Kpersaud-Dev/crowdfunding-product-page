@@ -26,6 +26,8 @@ const modal = document.querySelector('.modal'),
       continueBtn = document.querySelectorAll('.continue-btn'),
       pledgeAmount = document.querySelectorAll('.pledge-amount');
 
+
+
 // Success Modal variables
 const successModal = document.querySelector('.success'),
       successBtn = document.querySelector('.success-btn');
@@ -41,23 +43,37 @@ const updateProgress = amount => progressBar.value = amount;
 
 
 // Update Amount Backed Function
-const updateAmountBacked = () => {
-  // let newMoney = `$${money + parseInt(pledgeAmount.value)}`;
-  let newMoney = `$${money + pledgeAmount.forEach(pledge => {
-    console.log(pledge.value);
-    return parseInt(pledge.value);
-  })}`;
-  totalMoney.innerText = newMoney;
-  // let result = money + parseInt(pledgeAmount.value);
-  let result = money + parseInt(pledgeAmount.forEach(pledge => {
-    return parseInt(pledge.value);    
-  }));
-  console.log(typeof(result));
-  money = result;
-
-  pledgeAmount.forEach(pledge => {
-    return pledge.value;
+const updateAmountBacked = (amount) => {
+ 
+  let pledges = pledgeAmount.forEach(pledge => {
+    return parseFloat(pledge.value);
   })
+
+  let newMoney = `$${amount + parseInt(pledges)}`;
+  totalMoney.innerText = newMoney;
+  let result = amount + parseInt(pledges);
+  amount = result;
+
+  // Single QuerySelector
+
+  // let newMoney = `$${money + parseInt(pledgeAmount.value)}`;
+  // totalMoney.innerText = newMoney;
+  // let result = money + parseInt(pledgeAmount.value);
+  // money = result;
+
+  // Pledges QuerySelectorAll
+
+  // let pledges = pledgeAmount.forEach(pledge => {
+  //   return parseFloat(pledge.value);
+  // })
+
+  // console.log(typeof(pledges))
+  // let newMoney = `$${money + pledges}`;
+  
+  // totalMoney.innerText = newMoney;
+  // let result = money + pledges;
+
+  // money = result;
 
   if(result >= 100000) {
     console.log('Fully backed!')
@@ -72,7 +88,7 @@ const updateAmountBacked = () => {
 // Update Totals Function
 const updateTotals = () => {  
   // Update Amount Backed
-  updateAmountBacked();
+  updateAmountBacked(money);
 
   //Increase Backers count
   updateBackers();
@@ -85,7 +101,7 @@ const updateTotals = () => {
 
 // On Load display default values
 window.addEventListener('load', () => {
-  totalMoney.innerText = `$ ${money}`;
+  totalMoney.innerText = `$${money}`;
   totalBackers.innerText = `${backers}`;
 })
 

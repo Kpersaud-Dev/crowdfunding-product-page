@@ -14,11 +14,15 @@
 
       ul {
         display: flex;
+        flex-flow: row;
         justify-content: space-around;
+        width: 60%;
+        background: none;
 
         li {
           list-style-type: none;
-          padding: 1em;
+          padding: 1.5em;
+          border-top: none;
           transition: .5s;
           cursor: pointer;
 
